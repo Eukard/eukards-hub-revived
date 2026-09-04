@@ -220,21 +220,21 @@ ItemsTab:CreateButton({
 ItemsTab:CreateButton({
    Name = "Glitch Ambush Plushie",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Aboba228-Abobic/Eukard-s-Hub/refs/heads/main/Glitch%20Ambush%20Plushie.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/Glitch%20Ambush%20Plushie.lua"))()
    end,
 })
 
 ItemsTab:CreateButton({
    Name = "GuidingCandleButBad",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Aboba228-Abobic/Eukard-s-Hub/refs/heads/main/GuidingCandle.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/GuidingCandle.lua"))()
    end,
 })
 
 ItemsTab:CreateButton({
    Name = "CuriousCandle",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Aboba228-Abobic/Eukard-s-Hub/refs/heads/main/CuriousCandle.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/CuriousCandle.lua"))()
    end,
 })
 
@@ -422,14 +422,14 @@ local MainSection = MainTab:CreateSection("Textures")
 MainTab:CreateButton({
    Name = "Doors floor 2 door",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Aboba228-Abobic/Eukard-s-Hub/refs/heads/main/floor2%20door.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/floor2%20door.lua"))()
    end,
 })
 
 MainTab:CreateButton({
    Name = "Iron door",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Aboba228-Abobic/Eukard-s-Hub/refs/heads/main/Iron%20door.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/Iron%20door.lua"))()
    end,
 })
 
