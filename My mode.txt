@@ -1,0 +1,125 @@
+-- Badge
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "EEEEEEEEE",
+    Desc = "Eukard's mode activeated",
+    Reason = "epik mode",
+    Image = "https://static.wikia.nocookie.net/doors-hard-mode/images/d/d5/Disturbance.png/revision/latest?cb=20250904004636"
+})
+
+-- Demon Screech
+task.spawn(function()
+    while true do
+        wait(65)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Demon%20Screech"))()
+    end
+end)
+
+-- Grey Eyes
+coroutine.wrap(function()
+    while true do
+        wait(math.random(100, 140))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0.5)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Grey%20Eyes"))()
+    end
+end)()
+
+-- Nightmare Rush
+coroutine.wrap(function()
+    while true do
+        wait(math.random(80, 100))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Nightmare%20Rush"))()
+    end
+end)()
+
+-- Nightmare Ambush
+coroutine.wrap(function()
+    while true do
+        wait(math.random(100, 520))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/NightmareAmbush"))()
+    end
+end)()
+
+-- Him Entity
+coroutine.wrap(function()
+    while true do
+        wait(math.random(100, 550))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(3)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Him.lua"))()
+    end
+end)()
+
+-- Him Scream
+coroutine.wrap(function()
+    while true do
+        wait(math.random(100, 290))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Random-Files/refs/heads/main/Him%20Scream"))()
+    end
+end)()
+
+-- Hungered
+
+coroutine.wrap(function()
+    while true do
+        wait(math.random(120, 404))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bre29be3/Doors-Modes/refs/heads/main/Hungered"))()
+    end
+end)()
+
+
+-- Hunger
+coroutine.wrap(function()
+    while true do
+        wait(math.random(7, 30))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bre29be3/Doors-Modes/refs/heads/main/Hunger"))()
+    end
+end)()
+
+
+-- Surge
+coroutine.wrap(function()
+    while true do
+        wait(math.random(7, 30))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bre29be3/J/refs/heads/main/Surge"))()
+    end
+end)()
+
+
+-- B-60
+coroutine.wrap(function()
+    while true do
+        wait(math.random(200, 300))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bre29be3/Doors-Modes/refs/heads/main/B60"))()
+    end
+end)()
+
+-- Smiler
+coroutine.wrap(function()
+    while true do
+        wait(math.random(200, 300))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1.6)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Voor-Pr00/spawnnn/refs/heads/main/SMILER_Obfuscate"))()
+    end
+end)()
