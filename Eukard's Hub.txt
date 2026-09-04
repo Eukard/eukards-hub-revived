@@ -253,6 +253,21 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
+   Name = "Another moonjug",
+   Callback = function()
+ 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Alt/Scripts/refs/heads/main/MoonJug"))()
+   end,
+})
+
+ItemsTab:CreateButton({
+   Name = "SpiralJug",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Alt/Scripts/refs/heads/main/Spiral-Jug"))()
+   end,
+})
+
+
+ItemsTab:CreateButton({
    Name = "SeekGun",
    Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/refs/heads/main/seekgun.lua"))()
