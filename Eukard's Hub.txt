@@ -43,7 +43,7 @@ local EntitySection = EntityTab:CreateSection("more coming soon")
 EntityTab:CreateButton({
    Name = "Depth",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/DepthCrazyMode"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/depth%20spawner"))()
    end,
 })
 
