@@ -1,4 +1,4 @@
--- Door Floor 2 Door By Noah
+-- Door Floor 2 Door By Eukard
 coroutine.wrap(function()
     while true do
         wait(0.0005)
