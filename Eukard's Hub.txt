@@ -197,7 +197,22 @@ EntityTab:CreateButton({
    end,
 })
 
+EntityTab:CreateButton({
+   Name = "Enraged eyes",
+   Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/NHBtG5GM"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "birb (kills but guiding light thinks birb is harmless)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbspawner.txt"))()
+   end,
+})
+
 ------------------------------- 
+
 -- Items Tab
 -------------------------------
 local ItemsTab = Window:CreateTab("items", nil) -- Title, Image
