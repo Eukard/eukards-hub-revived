@@ -191,6 +191,21 @@ EntityTab:CreateButton({
 })
 
 EntityTab:CreateButton({
+   Name = "the rooms a60",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Teilsthebfdifan/Modhub-assets/refs/heads/main/A60SpawnerDoors"))()
+   end,
+})
+
+
+EntityTab:CreateButton({
+   Name = "glitch ambush",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Teilsthebfdifan/Modhub-assets/refs/heads/main/AROXambush-spawn"))()
+   end,
+})
+
+EntityTab:CreateButton({
    Name = "Threat from fear and extreme mode",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/reboundplayz/Doors-Fixed-Modes/refs/heads/main/Threat%20Spawner"))()
@@ -205,7 +220,7 @@ EntityTab:CreateButton({
 })
 
 EntityTab:CreateButton({
-   Name = "birb (kills but guiding light thinks birb is harmless)",
+   Name = "birb (it doesnt kill, its a birb)",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbspawner.txt"))()
    end,
@@ -231,7 +246,7 @@ ItemsTab:CreateButton({
       loadstring(game:HttpGet("https://raw.githubusercontent.com/aadyian9000/the-thing/main/GoldenGummyFlashlight.lua", true))()
    end,
 })
-
+-- 
 ItemsTab:CreateButton({
    Name = "Glitch Ambush Plushie",
    Callback = function()
@@ -254,9 +269,16 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
-   Name = "Epic Crucifix",
+   Name = "Crucifix for custom enrtity",
    Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/refs/heads/main/Crucifix.lua"))()
+   end,
+})
+
+ItemsTab:CreateButton({
+   Name = "vidris crucifix wowlet owlet",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Teilsthebfdifan/Modhub-assets/refs/heads/main/virdiscrucifix.lua"))()
    end,
 })
 
@@ -268,16 +290,16 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
-   Name = "Another moonjug",
+   Name = "IS that a gubby",
    Callback = function()
- 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Alt/Scripts/refs/heads/main/MoonJug"))()
+ 	loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkMyNameLoll/PublicScripts/refs/heads/main/IsThatAGubbyTool"))()
    end,
 })
 
 ItemsTab:CreateButton({
-   Name = "SpiralJug",
+   Name = "Spiral candle",
    Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Alt/Scripts/refs/heads/main/Spiral-Jug"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkMyNameLoll/PrivateScripts/refs/heads/main/spiralcandle"))()
    end,
 })
 
