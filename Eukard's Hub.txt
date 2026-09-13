@@ -57,7 +57,7 @@ EntityTab:CreateButton({
 EntityTab:CreateButton({
    Name = "Smiler",
    Callback = function()
-      loadstring(game:HttpGet('https://pastefy.app/YMa2CPBC/raw'))()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Smiler'))()
    end,
 })
 
@@ -78,7 +78,7 @@ EntityTab:CreateButton({
 EntityTab:CreateButton({
    Name = "Blink",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Blink.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Blink"))()
    end,
 })
 
@@ -99,7 +99,14 @@ EntityTab:CreateButton({
 EntityTab:CreateButton({
    Name = "Rebound",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Rebound.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Rebound"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Frostbite",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-FrostBite"))()
    end,
 })
 
@@ -111,11 +118,20 @@ EntityTab:CreateButton({
 })
 
 EntityTab:CreateButton({
-   Name = "A-60",
+   Name = "A-60 hc",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Idk-lol2/a-60aa/refs/heads/main/---%3D%3D%3D%3D%3D%3D%20a-60%20agresiv%20spawner%20%3D%3D%3D%3D%3D%3D---.txt"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-A60"))()
    end,
 })
+
+
+EntityTab:CreateButton({
+   Name = "Ripper",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Ripper"))()
+   end,
+})
+
 
 EntityTab:CreateButton({
    Name = "Deezer (credits to Anctarus7105)",
@@ -142,6 +158,13 @@ EntityTab:CreateButton({
    Name = "Glitched Eyes",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/ObfuscatedEntities/GlitchedEyes.lua"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Dimensional eyes",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Dimensional-Eye"))()
    end,
 })
 
@@ -186,7 +209,7 @@ EntityTab:CreateButton({
 EntityTab:CreateButton({
    Name = "WH1T3",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Wh1t3%20Spawn"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-WH1T3"))()
    end,
 })
 
