@@ -48,9 +48,16 @@ EntityTab:CreateButton({
 })
 
 EntityTab:CreateButton({
-   Name = "A-200",
+   Name = "200",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/A-200"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "The happy scribble",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-A200"))()
    end,
 })
 
@@ -61,10 +68,39 @@ EntityTab:CreateButton({
    end,
 })
 
+
+EntityTab:CreateButton({
+   Name = "Deergod",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-DeerGod'))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Cease",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Cease'))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "dread",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Dread'))()
+   end,
+})
+
 EntityTab:CreateButton({
    Name = "SilenceHc",
    Callback = function()
-      loadstring(game:HttpGet("https://pastebin.com/raw/uNnkcsGU"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Silence"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Shocker",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Shocker"))()
    end,
 })
 
@@ -134,9 +170,9 @@ EntityTab:CreateButton({
 
 
 EntityTab:CreateButton({
-   Name = "Deezer (credits to Anctarus7105)",
+   Name = "Hunger",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Deezer%20Spawn"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Hunger"))()
    end,
 })
 
