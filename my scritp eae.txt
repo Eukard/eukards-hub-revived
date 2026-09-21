@@ -213,11 +213,10 @@ EntityTab:CreateButton({
 })
 
 EntityTab:CreateButton({
-   Name = "Trauma",
-   Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Trauma.lua"))()
-      end
-   end,
+  Name = "Trauma",
+  Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Trauma.lua"))()
+  end,
 })
 
 EntityTab:CreateButton({
