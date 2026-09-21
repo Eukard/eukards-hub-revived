@@ -40,6 +40,14 @@ local Window = Rayfield:CreateWindow({
 local EntityTab = Window:CreateTab("entity spawner", nil) -- Title, Image
 local EntitySection = EntityTab:CreateSection("more coming soon")
 
+
+EntityTab:CreateButton({
+   Name = "Peak entity i made for no reason",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawn%20erm.txt'))()
+   end,
+})
+
 EntityTab:CreateButton({
    Name = "Depth",
    Callback = function()
