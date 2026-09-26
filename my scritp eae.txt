@@ -301,12 +301,56 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
+   Name = "Debug stick (execute at door 0 in hotel if u wanna find it)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Debug%20Stick"))()
+   end,
+})
+
+ItemsTab:CreateButton({
+   Name = "laser gun",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Laser%20Gun.lua"))()
+   end,
+})
+
+ItemsTab:CreateButton({
+   Name = "magik book",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Magic%20Book"))()
+   end,
+})
+
+
+ItemsTab:CreateButton({
+   Name = "gummy flashlig",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Gummy%20Flashlight.lua"))()
+   end,
+})
+
+ItemsTab:CreateButton({
+   Name = "prupul fklashlight",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Purple%20Flashlight%20Script.lua"))()
+   end,
+})
+
+
+ItemsTab:CreateButton({
+   Name = "FLAME THORWER YOOOO",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Flamethrower"))()
+   end,
+})
+
+ItemsTab:CreateButton({
    Name = "golden flashlight",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/aadyian9000/the-thing/main/GoldenGummyFlashlight.lua", true))()
    end,
 })
--- 
+
 ItemsTab:CreateButton({
    Name = "Glitch Ambush Plushie",
    Callback = function()
@@ -315,9 +359,29 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
+   Name = "jeff the killer plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://13069619857")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+
+ItemsTab:CreateButton({
    Name = "GuidingCandleButBad",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/GuidingCandle.lua"))()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/GuidingCandle.lua"))()
+   end,
+})
+
+ItemsTab:CreateButton({
+   Name = "crucifix on anything",
+   Callback = function()
+      _G.Uses = 100
+      _G.Range = 30
+      _G.OnAnything = true
+      _G.Fail = false
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
    end,
 })
 
