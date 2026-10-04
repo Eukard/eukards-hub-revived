@@ -499,6 +499,13 @@ ItemsTab:CreateButton({
    end,
 })
 
+ItemsTab:CreateButton({
+   Name = "Budgie Plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://116214735977060")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
 
 ItemsTab:CreateButton({
    Name = "Glitch Scanner",
