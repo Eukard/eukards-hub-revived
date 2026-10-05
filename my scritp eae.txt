@@ -168,6 +168,26 @@ EntityTab:CreateButton({
    end,
 })
 
+EntityTab:CreateButton({
+   Name = "R-40 by gab",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/ItzzGabbbb/R-40-Spawner-Fixed/refs/heads/main/Doors%20Entity%20R-40.txt"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "B-244 sign state (CREDS TO GAB YET AGAIN)",
+   Callback = function()
+      loadstring(game:HttpGet("https://pastefy.app/9dkXpSyy/raw"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "B-244 sign state (CREDS TO GAB YET AGAIN)",
+   Callback = function()
+      loadstring(game:HttpGet("https://pastefy.app/9dkXpSyy/raw"))()
+   end,
+})
 
 EntityTab:CreateButton({
    Name = "Ripper",
@@ -429,21 +449,21 @@ ItemsTab:CreateButton({
 
 
 ItemsTab:CreateButton({
-   Name = "SeekGun",
+   Name = "SeekGun (broken sda)",
    Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/refs/heads/main/seekgun.lua"))()
    end,
 })
 
 ItemsTab:CreateButton({
-   Name = "Rocket Launcher",
+   Name = "Rocket Launcher (broken sda)",
    Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/refs/heads/main/rocketLauncher.lua"))()
    end,
 })
 
 ItemsTab:CreateButton({
-   Name = "Scanner",
+   Name = "Scanner (also broken, use grass scanner)",
    Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/refs/heads/main/Scanner.lua"))()
    end,
