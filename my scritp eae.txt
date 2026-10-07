@@ -299,6 +299,13 @@ EntityTab:CreateButton({
    end,
 })
 
+EntityTab:CreateButton({
+   Name = "scary-183 from IOTNERMAINLE ROROMS",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/scary183.txt"))()
+   end,
+})
+
 ------------------------------- 
 
 -- Items Tab
