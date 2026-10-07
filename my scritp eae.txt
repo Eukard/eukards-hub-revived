@@ -183,13 +183,6 @@ EntityTab:CreateButton({
 })
 
 EntityTab:CreateButton({
-   Name = "B-244 sign state (CREDS TO GAB YET AGAIN)",
-   Callback = function()
-      loadstring(game:HttpGet("https://pastefy.app/9dkXpSyy/raw"))()
-   end,
-})
-
-EntityTab:CreateButton({
    Name = "Ripper",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Ripper"))()
@@ -650,5 +643,19 @@ local Button = MainTab:CreateButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Floor%202%20script"))()
 
 
+   end,
+})
+
+------------------------------- 
+
+-- Hotel - spawjs
+-------------------------------
+local GTab = Window:CreateTab("hotel - spawns", nil) -- Title, Image
+local GSection = GTab:CreateSection("hotel - spawns")
+
+ItemsTab:CreateButton({
+   Name = "birb",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawnbirbbutoldversionofspawner.txt"))()
    end,
 })
