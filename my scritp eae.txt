@@ -365,22 +365,6 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
-   Name = "Glitch Ambush Plushie",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/Glitch%20Ambush%20Plushie.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "jeff the killer plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://13069619857")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-
-ItemsTab:CreateButton({
    Name = "GuidingCandleButBad",
    Callback = function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/GuidingCandle.lua"))()
@@ -513,14 +497,6 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
-   Name = "Budgie Plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://116214735977060")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-ItemsTab:CreateButton({
    Name = "Glitch Scanner",
    Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Agadigas/Doors/refs/heads/main/Glitched%20Scanner%20by%20Custom%20Doors"))()
@@ -568,6 +544,66 @@ ItemsTab:CreateButton({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Assets/Storage/Candle.lua"))()
    end,
 })
+-- PLUSH TAB!!!!!!!!!!!!!!!!!!!!
+local PlushTab = Window:CreateTab("Plushies!", nil) -- Title, Image
+local PlushSection = PlushTab:CreateSection("Plushies are not gonna be discountinued!!!")
+
+PlushTab:CreateButton({
+   Name = "Budgie Plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://116214735977060")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+PlushTab:CreateButton({
+   Name = "Glitch Ambush Plushie",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/Glitch%20Ambush%20Plushie.lua"))()
+   end,
+})
+
+PlushTab:CreateButton({
+   Name = "jeff the killer plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://13069619857")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+PlushTab:CreateButton({
+   Name = "Black budgie plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://123922281279006")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+PlushTab:CreateButton({
+   Name = "A-90 plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://127031055193819")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+
+PlushTab:CreateButton({
+   Name = "birb Plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://85495489833454")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+PlushTab:CreateButton({
+   Name = "Nightmare rush plushie",
+   Callback = function()
+      local tool = game:GetObjects("rbxassetid://95544587745188")[1]
+      tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
 
 -------------------------------
 -- modes Tab
@@ -638,11 +674,7 @@ local MainSection = MainTab:CreateSection("Textures")
 local Button = MainTab:CreateButton({
    Name = "floor 2 with ambience",
    Callback = function()
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Floor%202%20script"))()
-
-
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Floor%202%20script"))()
    end,
 })
 
@@ -650,8 +682,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-st
 
 -- Hotel - spawjs
 -------------------------------
-local GTab = Window:CreateTab("hotel - spawns", nil) -- Title, Image
-local GSection = GTab:CreateSection("hotel - spawns")
+local GTab = Window:CreateTab("before content upd spaws", nil) -- Title, Image
+local GSection = GTab:CreateSection("befor content upd spawns")
 
 GTab:CreateButton({
    Name = "birb",
