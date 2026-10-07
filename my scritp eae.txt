@@ -49,6 +49,27 @@ EntityTab:CreateButton({
 })
 
 EntityTab:CreateButton({
+   Name = "Curious bash",
+   Callback = function()
+      loadstring(game:HttpGet("https://github.com/sonicu645-cyber/Entities/blob/main/Curious%20Bash.lua"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "BanFlee (by gab)",
+   Callback = function()
+      loadstring(game:HttpGet("https://github.com/sonicu645-cyber/Entities/blob/main/Curious%20Bash.lua"))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Monoxide",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/eoyoustme/back/refs/heads/main/Monoxide1"))()
+   end,
+})
+
+EntityTab:CreateButton({
    Name = "Depth",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/depth%20spawner"))()
@@ -447,9 +468,9 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
-   Name = "Scanner (also broken, use grass scanner)",
+   Name = "SCANNER IS FIXED LES GOOEOAOEOAEOAOEA",
    Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/refs/heads/main/Scanner.lua"))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/RLnfcKVq"))()
    end,
 })
 
@@ -518,6 +539,20 @@ ItemsTab:CreateButton({
 })
 
 ItemsTab:CreateButton({
+   Name = "Banana launcher (super hard mode only)",
+   Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MateiDaBest/Utilities/refs/heads/main/Doors/Other/Banana%20Gun.lua'))()
+   end,
+})
+
+ItemsTab:CreateButton({
+   Name = "portal gun",
+   Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MateiDaBest/Utilities/refs/heads/main/Doors/Other/Portal%20Gun.lua'))()
+   end,
+})
+
+ItemsTab:CreateButton({
    Name = "Gravity Gun",
    Callback = function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Skibiditoiletscripts/e/refs/heads/main/gravity%20gun'),true))()
@@ -527,7 +562,7 @@ ItemsTab:CreateButton({
 ItemsTab:CreateButton({
    Name = "Grenade on anything",
    Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Modes/refs/heads/main/Grenade%20On%20Anything"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MateiDaBest/Utilities/main/Doors/Other/Grenade.lua"))()
    end,
 })
 
