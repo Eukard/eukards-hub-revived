@@ -653,7 +653,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-st
 local GTab = Window:CreateTab("hotel - spawns", nil) -- Title, Image
 local GSection = GTab:CreateSection("hotel - spawns")
 
-ItemsTab:CreateButton({
+GTab:CreateButton({
    Name = "birb",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawnbirbbutoldversionofspawner.txt"))()
