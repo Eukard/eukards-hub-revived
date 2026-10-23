@@ -1,128 +1,115 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+MainTab:CreateButton({
+   Name = "unhinged mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/idkman60093/Doors-Modes/refs/heads/main/Unhinged-Mode-Main.lua"))()
+   end,
+})
 
--- Safely download and run a button's script.
--- Requires an environment that supports HttpGet and loadstring.
-local function runRemoteScript(url)
-    if type(loadstring) ~= "function" then
-        warn("Eukard's Hub: this environment does not support loadstring.")
-        return
-    end
+MainTab:CreateButton({
+   Name = "hazy mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Hazy-Mode-Recreated-made-by-Guestly-(Celestian)-on-Discord"))()
+   end,
+})
 
-    local requestOK, source = pcall(function()
-        return game:HttpGet(url)
-    end)
+MainTab:CreateButton({
+   Name = "extreme mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Extreme-Mode-Recreated-made-by-Guestly"))()
+   end,
+})
 
-    if not requestOK or type(source) ~= "string" or source == "" then
-        warn("Eukard's Hub: failed to download script: " .. tostring(url))
-        warn(tostring(source))
-        return
-    end
+MainTab:CreateButton({
+   Name = "forbidden mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Forbidden-Mode-recreated-by-Guestly"))() 
+   end,
+})
 
-    local compileOK, compiled = pcall(loadstring, source)
-    if not compileOK or type(compiled) ~= "function" then
-        warn("Eukard's Hub: script could not be compiled: " .. tostring(url))
-        warn(tostring(compiled))
-        return
-    end
+MainTab:CreateButton({
+   Name = "suggestions mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Not-Guestly/Modes/refs/heads/main/Suggestions-Mode"))() 
+   end,
+})
 
-    local runOK, runError = pcall(compiled)
-    if not runOK then
-        warn("Eukard's Hub: script failed while running: " .. tostring(url))
-        warn(tostring(runError))
-    end
-end
+MainTab:CreateButton({
+   Name = "birb mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbmode"))()
+   end,
+})
 
+MainTab:CreateButton({
+   Name = "Frightening mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/TynaRan/Frightening/refs/heads/main/script.lua.txt"))()
+   end,
+})
 
-local Window = Rayfield:CreateWindow({
-   Name = "Eukard's Hub",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "loading Eukard's Hub",
-   LoadingSubtitle = "by Eukard",
-   Theme = "Dark Blue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+MainTab:CreateButton({
+   Name = "Endless mode by dripcapybara",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/EndlessMode.lua"))()
+   end,
+})
 
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+MainTab:CreateButton({
+   Name = "A-60 mode???",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Idk-lol2/a-60aa/refs/heads/main/A-60%20mode.Pl.txt"))()
+   end,
+})
 
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
+MainTab:CreateButton({
+   Name = "My mode",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Aboba228-Abobic/Eukard-s-Hub/refs/heads/main/My%20mode.txt"))()
+   end,
+})
+-------------------------------
+-- Textures Tab
+-------------------------------
+local MainTab = Window:CreateTab("Textures", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Textures")
 
-   Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
+MainTab:CreateButton({
+   Name = "Doors floor 2 door",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/floor2%20door.lua"))()
+   end,
+})
 
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+MainTab:CreateButton({
+   Name = "Iron door",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/Iron%20door.lua"))()
+   end,
 })
 
 -------------------------------
--- Entity Spawner Tab
+-- Themes Tab
 -------------------------------
-local EntityTab = Window:CreateTab("entity spawner", nil) -- Title, Image
-local EntitySection = EntityTab:CreateSection("more coming soon")
+local MainTab = Window:CreateTab("Themes (perfect for combined modes)", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Textures")
 
-
-EntityTab:CreateButton({
-   Name = "Peak entity i made for no reason",
+local Button = MainTab:CreateButton({
+   Name = "floor 2 with ambience",
    Callback = function()
-      runRemoteScript("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawn%20erm.txt")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Floor%202%20script"))()
    end,
 })
 
-EntityTab:CreateButton({
-   Name = "Curious bash",
+------------------------------- 
+
+-- Hotel - spawjs
+-------------------------------
+local GTab = Window:CreateTab("before content upd spaws", nil) -- Title, Image
+local GSection = GTab:CreateSection("befor content upd spawns")
+
+GTab:CreateButton({
+   Name = "birb",
    Callback = function()
-      runRemoteScript("https://raw.githubusercontent.com/sonicu645-cyber/Entities/refs/heads/main/Curious%20Bash.lua")
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawnbirbbutoldversionofspawner.txt"))()
    end,
 })
-
-EntityTab:CreateButton({
-   Name = "BanFlee (by gab)",
-   Callback = function()
-      runRemoteScript("https://raw.githubusercontent.com/sonicu645-cyber/Entities/refs/heads/main/Curious%20Bash.lua")
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Monoxide",
-   Callback = function()
-      runRemoteScript("https://raw.githubusercontent.com/eoyoustme/back/refs/heads/main/Monoxide1")
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Depth",
-   Callback = function()
-      runRemoteScript("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/depth%20spawner")
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "200",
-   Callback = function()
-      runRemoteScript("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/A-200")
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "The happy scribble",
-   Callback = function()
-      runRemoteScript("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-A200")
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Smiler",
-   Callback = function()
