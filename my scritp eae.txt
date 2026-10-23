@@ -712,38 +712,35 @@ MainTab:CreateButton({
 MainTab:CreateButton({
    Name = "hazy mode",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Hazy-Mode-Recreated-made-by-Guestly-(Celestian)-on-Discord", true))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Hazy-Mode-Recreated-made-by-Guestly-(Celestian)-on-Discord"))()
    end,
 })
 
 MainTab:CreateButton({
    Name = "extreme mode",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Extreme-Mode-Recreated-made-by-Guestly", true))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Extreme-Mode-Recreated-made-by-Guestly"))()
    end,
 })
 
 MainTab:CreateButton({
    Name = "forbidden mode",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Forbidden-Mode-recreated-by-Guestly", true))() 
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Forbidden-Mode-recreated-by-Guestly"))() 
    end,
 })
 
 MainTab:CreateButton({
    Name = "suggestions mode",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Not-Guestly/Modes/refs/heads/main/Suggestions-Mode", true))() 
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Not-Guestly/Modes/refs/heads/main/Suggestions-Mode"))() 
    end,
 })
 
 MainTab:CreateButton({
    Name = "birb mode",
    Callback = function()
-      while true do
-	 	 wait(20)
-	  	loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbspawner.txt"))()
-	  end
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbmode"))()
    end,
 })
 
