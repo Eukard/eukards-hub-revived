@@ -740,9 +740,10 @@ MainTab:CreateButton({
 MainTab:CreateButton({
    Name = "birb mode",
    Callback = function()
-      while true do
-	wait(20)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbspawner.txt"))()
+    while true do
+	  wait(20)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbspawner.txt"))()
+	end
    end,
 })
 
