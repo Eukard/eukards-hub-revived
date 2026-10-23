@@ -1,5 +1,38 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
+-- Safely download and run a button's script.
+-- Requires an environment that supports HttpGet and loadstring.
+local function runRemoteScript(url)
+    if type(loadstring) ~= "function" then
+        warn("Eukard's Hub: this environment does not support loadstring.")
+        return
+    end
+
+    local requestOK, source = pcall(function()
+        return game:HttpGet(url)
+    end)
+
+    if not requestOK or type(source) ~= "string" or source == "" then
+        warn("Eukard's Hub: failed to download script: " .. tostring(url))
+        warn(tostring(source))
+        return
+    end
+
+    local compileOK, compiled = pcall(loadstring, source)
+    if not compileOK or type(compiled) ~= "function" then
+        warn("Eukard's Hub: script could not be compiled: " .. tostring(url))
+        warn(tostring(compiled))
+        return
+    end
+
+    local runOK, runError = pcall(compiled)
+    if not runOK then
+        warn("Eukard's Hub: script failed while running: " .. tostring(url))
+        warn(tostring(runError))
+    end
+end
+
+
 local Window = Rayfield:CreateWindow({
    Name = "Eukard's Hub",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
@@ -44,776 +77,52 @@ local EntitySection = EntityTab:CreateSection("more coming soon")
 EntityTab:CreateButton({
    Name = "Peak entity i made for no reason",
    Callback = function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawn%20erm.txt'))()
+      runRemoteScript("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawn%20erm.txt")
    end,
 })
 
 EntityTab:CreateButton({
    Name = "Curious bash",
    Callback = function()
-      loadstring(game:HttpGet("https://github.com/sonicu645-cyber/Entities/blob/main/Curious%20Bash.lua"))()
+      runRemoteScript("https://raw.githubusercontent.com/sonicu645-cyber/Entities/refs/heads/main/Curious%20Bash.lua")
    end,
 })
 
 EntityTab:CreateButton({
    Name = "BanFlee (by gab)",
    Callback = function()
-      loadstring(game:HttpGet("https://github.com/sonicu645-cyber/Entities/blob/main/Curious%20Bash.lua"))()
+      runRemoteScript("https://raw.githubusercontent.com/sonicu645-cyber/Entities/refs/heads/main/Curious%20Bash.lua")
    end,
 })
 
 EntityTab:CreateButton({
    Name = "Monoxide",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/eoyoustme/back/refs/heads/main/Monoxide1"))()
+      runRemoteScript("https://raw.githubusercontent.com/eoyoustme/back/refs/heads/main/Monoxide1")
    end,
 })
 
 EntityTab:CreateButton({
    Name = "Depth",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/depth%20spawner"))()
+      runRemoteScript("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/depth%20spawner")
    end,
 })
 
 EntityTab:CreateButton({
    Name = "200",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/A-200"))()
+      runRemoteScript("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/A-200")
    end,
 })
 
 EntityTab:CreateButton({
    Name = "The happy scribble",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-A200"))()
+      runRemoteScript("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-A200")
    end,
 })
 
 EntityTab:CreateButton({
    Name = "Smiler",
    Callback = function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Smiler'))()
-   end,
-})
-
-
-EntityTab:CreateButton({
-   Name = "Deergod",
-   Callback = function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-DeerGod'))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Cease",
-   Callback = function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Cease'))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "dread",
-   Callback = function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Dread'))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "SilenceHc",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Silence"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Shocker",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Shocker"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Claim",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Claim.lua"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Blink",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Blink"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Matcher",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Matcher.lua"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Overseer",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Overseer.lua"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Rebound",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Rebound"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Frostbite",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-FrostBite"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "A-60 No kill",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Idk-lol2/a-60aa/refs/heads/main/---%3D%3D%3D%3D%3D%3D%20a-60%20spawn%20%3D%3D%3D%3D%3D%3D---.txt"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "A-60 hc",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-A60"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "R-40 by gab",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/ItzzGabbbb/R-40-Spawner-Fixed/refs/heads/main/Doors%20Entity%20R-40.txt"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "B-244 sign state (CREDS TO GAB YET AGAIN)",
-   Callback = function()
-      loadstring(game:HttpGet("https://pastefy.app/9dkXpSyy/raw"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Ripper",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Hardcore-Ripper"))()
-   end,
-})
-
-
-EntityTab:CreateButton({
-   Name = "Hunger",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Hunger"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Him (hotel +)",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/HimHotel%2B"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Nerfed Eyes",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Eyes%20Impossible%20Mode"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Glitched Eyes",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/ObfuscatedEntities/GlitchedEyes.lua"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Dimensional eyes",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-Dimensional-Eye"))()
-   end,
-})
-
-EntityTab:CreateButton({
-  Name = "Trauma",
-  Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Trauma.lua"))()
-  end,
-})
-
-EntityTab:CreateButton({
-   Name = "Nightmare ambush",
-   Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Nightmare%20Ambush%20Spawn"))()
-   end,
-})
-
-
-EntityTab:CreateButton({
-   Name = "Nightmare Hunger",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Nightmare%20Hunger%20Fixed"))()
-   end,
-})
-
-
-EntityTab:CreateButton({
-   Name = "Nightmare Rush",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Nightmare%20Rush%20Spawn"))()
-   end,
-})
-
-
-EntityTab:CreateButton({
-   Name = "WH1T3",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Munciseekawa/model/refs/heads/main/Impossible-WH1T3"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "the rooms a60",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Teilsthebfdifan/Modhub-assets/refs/heads/main/A60SpawnerDoors"))()
-   end,
-})
-
-
-EntityTab:CreateButton({
-   Name = "glitch ambush",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Teilsthebfdifan/Modhub-assets/refs/heads/main/AROXambush-spawn"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Threat from fear and extreme mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/reboundplayz/Doors-Fixed-Modes/refs/heads/main/Threat%20Spawner"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "Enraged eyes",
-   Callback = function()
-      loadstring(game:HttpGet("https://pastebin.com/raw/NHBtG5GM"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "birb (it doesnt kill, its a birb)",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbspawner.txt"))()
-   end,
-})
-
-EntityTab:CreateButton({
-   Name = "scary-183 from IOTNERMAINLE ROROMS",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/scary183.txt"))()
-   end,
-})
-
-------------------------------- 
-
--- Items Tab
--------------------------------
-local ItemsTab = Window:CreateTab("items", nil) -- Title, Image
-local ItemsSection = ItemsTab:CreateSection("items")
-
-ItemsTab:CreateButton({
-   Name = "golden scanner",
-   Callback = function()
-      loadstring(game:HttpGet("https://pastebin.com/raw/umRteEPy"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Debug stick (execute at door 0 in hotel if u wanna find it)",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Debug%20Stick"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "laser gun",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Laser%20Gun.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "magik book",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Magic%20Book"))()
-   end,
-})
-
-
-ItemsTab:CreateButton({
-   Name = "gummy flashlig",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Gummy%20Flashlight.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "prupul fklashlight",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Purple%20Flashlight%20Script.lua"))()
-   end,
-})
-
-
-ItemsTab:CreateButton({
-   Name = "FLAME THORWER YOOOO",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Flamethrower"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "golden flashlight",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/aadyian9000/the-thing/main/GoldenGummyFlashlight.lua", true))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "GuidingCandleButBad",
-   Callback = function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/GuidingCandle.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "crucifix on anything",
-   Callback = function()
-      _G.Uses = 100
-      _G.Range = 30
-      _G.OnAnything = true
-      _G.Fail = false
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "CuriousCandle",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/CuriousCandle.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Crucifix for custom enrtity",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/refs/heads/main/Crucifix.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "vidris crucifix wowlet owlet",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Teilsthebfdifan/Modhub-assets/refs/heads/main/virdiscrucifix.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "MoonJug",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Idk-lol2/moonjug/refs/heads/main/lol%20brotxt.txt"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "IS that a gubby",
-   Callback = function()
- 	loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkMyNameLoll/PublicScripts/refs/heads/main/IsThatAGubbyTool"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Spiral candle",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkMyNameLoll/PrivateScripts/refs/heads/main/spiralcandle"))()
-   end,
-})
-
-
-ItemsTab:CreateButton({
-   Name = "SeekGun (broken sda)",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/refs/heads/main/seekgun.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Rocket Launcher (broken sda)",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/refs/heads/main/rocketLauncher.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "SCANNER IS FIXED LES GOOEOAOEOAEOAOEA",
-   Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/RLnfcKVq"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Shears on anything (idk if works on players)",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/refs/heads/main/Buffed%20Shears%20On%20Everything.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "A Whopper?",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/refs/heads/main/Normal%20Whopper.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "A Glowing Whopper?",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/refs/heads/main/Glowing%20Whopper.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "F3X",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/refs/heads/main/F3X.lua"))()
-   end,
-})
-
-
-ItemsTab:CreateButton({
-   Name = "Paintball Gun",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/refs/heads/main/Paintball%20Gun.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "BlackHole",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/refs/heads/main/Black%20Hole.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Grass Scanner",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Matthew201322/Doors-Scriptee/refs/heads/main/grass%20tablet.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Glitch Scanner",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Agadigas/Doors/refs/heads/main/Glitched%20Scanner%20by%20Custom%20Doors"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Resize stick",
-   Callback = function()
-    loadstring(game:HttpGet('https://gist.githubusercontent.com/IdkMyNameLoll/f0178af2301ca90c09895f10f3e7bd4b/raw/46899ccc3626f3485d85f990012f7ef37ae52e5e/resizerDoorsRemake'))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Banana launcher (super hard mode only)",
-   Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/MateiDaBest/Utilities/refs/heads/main/Doors/Other/Banana%20Gun.lua'))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "portal gun",
-   Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/MateiDaBest/Utilities/refs/heads/main/Doors/Other/Portal%20Gun.lua'))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Gravity Gun",
-   Callback = function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Skibiditoiletscripts/e/refs/heads/main/gravity%20gun'),true))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Grenade on anything",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MateiDaBest/Utilities/main/Doors/Other/Grenade.lua"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Pink scanner",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Matthew201322/Doors-Scriptee/refs/heads/main/the%20tablet.luau"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "M249",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/hi822010/Extras-Gliese-Hub-Doors/refs/heads/main/M249"))()
-   end,
-})
-
-ItemsTab:CreateButton({
-   Name = "Guiding candleV3",
-   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Assets/Storage/Candle.lua"))()
-   end,
-})
--- PLUSH TAB!!!!!!!!!!!!!!!!!!!!
-local PlushTab = Window:CreateTab("Plushies!", nil) -- Title, Image
-local PlushSection = PlushTab:CreateSection("Plushies are not gonna be discountinued!!!")
-
-PlushTab:CreateButton({
-   Name = "Budgie Plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://116214735977060")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-PlushTab:CreateButton({
-   Name = "Glitch Ambush Plushie",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/Glitch%20Ambush%20Plushie.lua"))()
-   end,
-})
-
-PlushTab:CreateButton({
-   Name = "jeff the killer plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://13069619857")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-PlushTab:CreateButton({
-   Name = "Black budgie plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://123922281279006")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-PlushTab:CreateButton({
-   Name = "A-90 plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://127031055193819")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-
-PlushTab:CreateButton({
-   Name = "birb Plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://85495489833454")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-PlushTab:CreateButton({
-   Name = "Nightmare rush plushie",
-   Callback = function()
-      local tool = game:GetObjects("rbxassetid://95544587745188")[1]
-      tool.Parent = game.Players.LocalPlayer.Backpack
-   end,
-})
-
-
--------------------------------
--- modes Tab
--------------------------------
-local MainTab = Window:CreateTab("modes", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("gamemodes")
-
-MainTab:CreateButton({
-   Name = "hardcore mode by dripcapybara",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/HardcoreFixed.lua"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "doors hardcore by noonie v2",
-   Callback = function()
-      loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Doors-Hardcore-Mode-V2-By-Noonie-29948"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "mayhem mode by local playerr",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Mayhem%20mode%20recreate/Code"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "hardcore reignited (hardcore but worse ig)",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Alt/Scripts/refs/heads/main/Hardcore-Reignited-(Recreated)"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "impossible mode (with small changes, be aware that there might be stuff u wont see in the original script)",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Outernal/Doors/refs/heads/main/Impossible-Mode-Plus"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "Rooms low detailed",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/eliazbp92-collab/Rooms-low-detailed-mode-doors/refs/heads/main/Script"))() 
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "broken mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/idkman60093/Doors-Modes/refs/heads/main/Broken-Mode-V1.8-Fixed-Version"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "unhinged mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/idkman60093/Doors-Modes/refs/heads/main/Unhinged-Mode-Main.lua"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "hazy mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Hazy-Mode-Recreated-made-by-Guestly-(Celestian)-on-Discord"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "extreme mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Extreme-Mode-Recreated-made-by-Guestly"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "forbidden mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Forbidden-Mode-recreated-by-Guestly"))() 
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "suggestions mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Not-Guestly/Modes/refs/heads/main/Suggestions-Mode"))() 
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "birb mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbmode"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "Frightening mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/TynaRan/Frightening/refs/heads/main/script.lua.txt"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "Endless mode by dripcapybara",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/EndlessMode.lua"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "A-60 mode???",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Idk-lol2/a-60aa/refs/heads/main/A-60%20mode.Pl.txt"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "My mode",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Aboba228-Abobic/Eukard-s-Hub/refs/heads/main/My%20mode.txt"))()
-   end,
-})
--------------------------------
--- Textures Tab
--------------------------------
-local MainTab = Window:CreateTab("Textures", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Textures")
-
-MainTab:CreateButton({
-   Name = "Doors floor 2 door",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/floor2%20door.lua"))()
-   end,
-})
-
-MainTab:CreateButton({
-   Name = "Iron door",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/Iron%20door.lua"))()
-   end,
-})
-
--------------------------------
--- Themes Tab
--------------------------------
-local MainTab = Window:CreateTab("Themes (perfect for combined modes)", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Textures")
-
-local Button = MainTab:CreateButton({
-   Name = "floor 2 with ambience",
-   Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Floor%202%20script"))()
-   end,
-})
-
-------------------------------- 
-
--- Hotel - spawjs
--------------------------------
-local GTab = Window:CreateTab("before content upd spaws", nil) -- Title, Image
-local GSection = GTab:CreateSection("befor content upd spawns")
-
-GTab:CreateButton({
-   Name = "birb",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/spawnbirbbutoldversionofspawner.txt"))()
-   end,
-})
