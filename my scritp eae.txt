@@ -661,84 +661,84 @@ MainTab:CreateButton({
 })
 
 MainTab:CreateButton({
-   Name = "doors hardcore by noonie v2"
+   Name = "doors hardcore by noonie v2",
    Callback = function()
       loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Doors-Hardcore-Mode-V2-By-Noonie-29948"))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "mayhem mode by local playerr"
+   Name = "mayhem mode by local playerr",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/localplayerr/Doors-stuff/refs/heads/main/Mayhem%20mode%20recreate/Code"))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "hardcore reignited (hardcore but worse ig)"
+   Name = "hardcore reignited (hardcore but worse ig)",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Alt/Scripts/refs/heads/main/Hardcore-Reignited-(Recreated)"))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "impossible mode (with small changes, be aware that there might be stuff u wont see in the original script)"
+   Name = "impossible mode (with small changes, be aware that there might be stuff u wont see in the original script)",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Outernal/Doors/refs/heads/main/Impossible-Mode-Plus"))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "Rooms low detailed"
+   Name = "Rooms low detailed",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/eliazbp92-collab/Rooms-low-detailed-mode-doors/refs/heads/main/Script"))() 
    end,
 })
 
 MainTab:CreateButton({
-   Name = "broken mode"
+   Name = "broken mode",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/idkman60093/Doors-Modes/refs/heads/main/Broken-Mode-V1.8-Fixed-Version"))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "unhinged mode"
+   Name = "unhinged mode",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/idkman60093/Doors-Modes/refs/heads/main/Unhinged-Mode-Main.lua"))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "hazy mode"
+   Name = "hazy mode",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Hazy-Mode-Recreated-made-by-Guestly-(Celestian)-on-Discord", true))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "extreme mode"
+   Name = "extreme mode",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Extreme-Mode-Recreated-made-by-Guestly", true))()
    end,
 })
 
 MainTab:CreateButton({
-   Name = "forbidden mode"
+   Name = "forbidden mode",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/GuestlyTheGreatestGuest/Modes/refs/heads/main/Forbidden-Mode-recreated-by-Guestly", true))() 
    end,
 })
 
 MainTab:CreateButton({
-   Name = "suggestions mode"
+   Name = "suggestions mode",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Not-Guestly/Modes/refs/heads/main/Suggestions-Mode", true))() 
    end,
 })
 
 MainTab:CreateButton({
-   Name = "birb mode"
+   Name = "birb mode",
    Callback = function()
       while true do
 	wait(20)
