@@ -97,6 +97,47 @@ EntityTab:CreateButton({
    end,
 })
 
+EntityTab:CreateButton({
+   Name = "Threat mayhem mode",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Hoangnguyen72628/MayhemMode/refs/heads/main/ObfuscatedEntities/Threat-obfuscated.lua'))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Twister",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Hoangnguyen72628/MayhemMode/refs/heads/main/ObfuscatedEntities/Twister-obfuscated.lua'))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Obsession",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Hoangnguyen72628/MayhemMode/refs/heads/main/ObfuscatedEntities/Obsession-obfuscated.lua'))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "Manic eyes",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Hoangnguyen72628/MayhemMode/refs/heads/main/ObfuscatedEntities/Manic%20Eyes-obfuscated.lua'))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "fog (mayhem mode)",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Hoangnguyen72628/MayhemMode/refs/heads/main/ObfuscatedEntities/Fog-obfuscated.lua'))()
+   end,
+})
+
+EntityTab:CreateButton({
+   Name = "blackout",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Hoangnguyen72628/MayhemMode/refs/heads/main/ObfuscatedEntities/Blackout-obfuscated.lua'))()
+   end,
+})
 
 EntityTab:CreateButton({
    Name = "Deergod",
@@ -249,17 +290,30 @@ EntityTab:CreateButton({
 EntityTab:CreateButton({
   Name = "Trauma",
   Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Trauma.lua"))()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Eukard/eukards-hub-revived/refs/heads/main/trauma.txt"))()
+  end,
+})
+
+EntityTab:CreateButton({
+  Name = "Wraith",
+  Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Wra1th"))()
   end,
 })
 
 EntityTab:CreateButton({
    Name = "Nightmare ambush",
    Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Nightmare%20Ambush%20Spawn"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/NightMareAmbush"))()
    end,
 })
 
+EntityTab:CreateButton({
+   Name = "Surge",
+   Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Entities-Spawns/refs/heads/main/Surge.lua"))()
+   end,
+})
 
 EntityTab:CreateButton({
    Name = "Nightmare Hunger",
